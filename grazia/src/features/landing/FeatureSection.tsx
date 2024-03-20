@@ -22,7 +22,7 @@ export const FeatureSection = () => {
         </h2>
       </Section>
       <Section className="light rounded-lg bg-gradient-to-r from-blue-200 to-cyan-200 py-12 text-foreground shadow">
-        <div className={cn("w-full flex flex-col items-center py-4")}>
+        <div className={cn("w-200 flex flex-col items-center py-2")}>
           <AnimatePresence mode="wait">
             {step === 0 && (
               <motion.div

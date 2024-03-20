@@ -60,7 +60,7 @@ export function LandingHeader() {
             src="/icon.png"
             width={32}
             height={32}
-            alt="get-testimonials.com logo"
+            alt="grazias logo"
           />
         </motion.div>
         <motion.nav
@@ -74,7 +74,7 @@ export function LandingHeader() {
           className="flex items-center gap-4 text-sm font-medium text-muted-foreground"
         >
           <a href="#pricing">Pricing</a>
-          <a href="#features">Feathures</a>
+          <a href="#features">Features</a>
           <AppButton />
           <ModeToggle />
         </motion.nav>

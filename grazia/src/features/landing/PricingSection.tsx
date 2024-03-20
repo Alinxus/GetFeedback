@@ -28,12 +28,12 @@ export const PricingSection = async () => {
           We offer a simple plan for everyone.
         </p>
       </div>
-      <div className="flex justify-center gap-4 max-lg:flex-col">
+      <div className="flex justify-center gap-6 max-lg:flex-col">
         <PricingCard
           title="Starter"
           price={0}
           description="To try our product"
-          items={["Create 1 product", "Get 10 reviews"]}
+          items={["Create 1 product", "Get 15 reviews", "Testimonial collection form", "Form sharing", "Invites and tracking"]}
         >
           <Link
             href="/api/auth/signin"
@@ -50,7 +50,7 @@ export const PricingSection = async () => {
         </PricingCard>
         <PricingCard
           title="Premium"
-          price={39}
+          price={19}
           description="For business that want to grow with the best review experience"
           items={[
             "Create infinite product",
@@ -58,6 +58,52 @@ export const PricingSection = async () => {
             "Customize your review page",
             "Customize your colors",
             "Get a 'wall of reviews'",
+            "Support an indie maker 🥺 ",
+            "Use your own branding"
+          ]}
+        >
+          {user ? (
+            <form className="w-full">
+              <Button
+                formAction={async () => {
+                  "use server";
+                  await upgradeToPremium("");
+                }}
+                size="lg"
+                variant="default"
+                className="w-full"
+              >
+                Grab it
+              </Button>
+            </form>
+          ) : (
+            <Link
+              href="/api/auth/signin"
+              className={cn(
+                buttonVariants({
+                  size: "lg",
+                  variant: "outline",
+                }),
+                "w-full"
+              )}
+            >
+              Sign Up
+            </Link>
+          )}
+        </PricingCard>
+        <PricingCard
+          title="Lifetime"
+          price={299}
+          description="Lifetime Deal, Pay Once and have it Forever"
+          items={[
+            "Create infinite product",
+            "Get infinite reviews",
+            "Customize your review page",
+            "Customize your colors",
+            "Get a 'wall of reviews'",
+            "Support an indie maker 🥺 ",
+            "Use your own branding",
+            "With some new features coming soon"
           ]}
         >
           {user ? (

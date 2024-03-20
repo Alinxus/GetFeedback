@@ -22,17 +22,17 @@ export const HeroSection = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           ></path>
         </svg>
       </a>
       <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-foreground  md:text-5xl lg:text-6xl">
-        Increase your customer review by 4
+      Collect, manage and <br /> share your testimonials
       </h1>
       <p className="mb-8 text-lg font-normal text-muted-foreground sm:px-16 lg:text-xl xl:px-48">
-        Using AI and Voice Note taking to engage the customer in more meaningful
+      Elevate your brand with authentic customer stories. <br />Using AI and Voice Note taking to engage the customer in more meaningful
         review.
       </p>
       <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
@@ -42,7 +42,7 @@ export const HeroSection = () => {
             size: "lg",
           })}
         >
-          Learn more
+          Sign Up
           <svg
             className="-mr-1 ml-2 size-5"
             fill="currentColor"
@@ -50,9 +50,9 @@ export const HeroSection = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </a>
