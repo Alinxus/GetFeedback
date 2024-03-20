@@ -15,5 +15,5 @@ export const env = createEnv({
   client: {},
   experimental__runtimeEnv: {
     NEXT_PUBLIC_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_PUBLISHABLE_KEY,
-  },
+    }
 });
