@@ -8,8 +8,8 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "get-testimonials.com",
-  description: "Get more rewiews and money !",
+  title: "grazias.com",
+  description: "Testimonials Made easy!",
   metadataBase: new URL(getServerUrl()),
 };
 
