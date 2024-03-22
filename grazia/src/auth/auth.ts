@@ -21,6 +21,7 @@ export const {
       clientSecret: env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  secret: process.env.SECRET,
   events: {
     createUser: async (message) => {
       const userId = message.user.id;
