@@ -36,7 +36,7 @@ export const PricingSection = async () => {
           items={["Create 1 product", "Get 15 reviews", "Testimonial collection form", "Form sharing", "Invites and tracking"]}
         >
           <Link
-            href="/api/auth/signin"
+            href="/api/auth/login"
             className={cn(
               buttonVariants({
                 size: "lg",
@@ -78,7 +78,7 @@ export const PricingSection = async () => {
             </form>
           ) : (
             <Link
-              href="/api/auth/signin"
+              href="/api/auth/login"
               className={cn(
                 buttonVariants({
                   size: "lg",
@@ -122,7 +122,7 @@ export const PricingSection = async () => {
             </form>
           ) : (
             <Link
-              href="/api/auth/signin"
+              href="/api/auth/login"
               className={cn(
                 buttonVariants({
                   size: "lg",

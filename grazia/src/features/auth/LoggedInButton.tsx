@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import { LoggedInDropdown } from "./LoggedInDropdown";
 import { SignInButton } from "./SignInButton";
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
+
 
 export const LoggedInButton = async () => {
   const user = await currentUser();
 
   if (!user) {
-    return <SignInButton />;
+    return <LoginLink>Sign in</LoginLink>;
   }
 
   return (

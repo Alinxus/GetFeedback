@@ -1,11 +1,13 @@
-"use client";
-
+'use client'
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useEffect } from "react";
 import { SignInButton } from "../auth/SignInButton";
 import { ModeToggle } from "../theme/ModeToggle";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+
+
 
 function useBoundedScroll(threshold: number) {
   let { scrollY } = useScroll();
@@ -88,10 +90,10 @@ let clamp = (number: number, min: number, max: number) =>
 
 const AppButton = () => {
   const session = useSession();
-
-  if (session.data?.user) {
+  const {user, isAuthenticated} = useKindeBrowserClient();
+  if(isAuthenticated){
     return <a href="/products">App</a>;
-  } else {
+  }else {
     return <SignInButton />;
   }
 };
