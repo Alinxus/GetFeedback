@@ -4,7 +4,7 @@ import { Avatar, DropdownMenu, Loading } from "@lemonsqueezy/wedges";
 import { ChevronRightIcon, MoreVertical } from "lucide-react";
 import { type User } from "next-auth";
 import { useState } from "react";
-import { logout } from "@/app/actions";
+import { logout } from "../../../app/actions";
 
 export function UserMenu(props: { user?: User }) {
   const { user } = props;

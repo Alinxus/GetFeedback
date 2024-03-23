@@ -4,7 +4,7 @@ import { Button, Loading } from "@lemonsqueezy/wedges";
 import { CheckIcon, WebhookIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { setupWebhook } from "@/app/actions";
+import { setupWebhook } from "../../../app/actions";
 
 export function SetupWebhookButton({
   disabled = false,

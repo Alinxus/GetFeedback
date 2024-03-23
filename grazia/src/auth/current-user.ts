@@ -1,8 +1,9 @@
 import { User } from "@prisma/client";
-import { baseAuth } from "./auth";
+import { auth } from "../auth";
+import { getServerSession } from "next-auth/next"
 
 export const currentUser = async () => {
-  const session = await baseAuth();
+  const session = await getServerSession()
 
   if (!session?.user) {
     return null;

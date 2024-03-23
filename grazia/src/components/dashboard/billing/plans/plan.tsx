@@ -2,7 +2,7 @@ import { SearchXIcon } from "lucide-react";
 import { Alert } from "@lemonsqueezy/wedges";
 import { type NewPlan } from "@/db/schema";
 import { cn, formatPrice } from "@/lib/utils";
-import { Section } from"../../../../../app/actions";
+import { Section } from "../../section";
 import { SignupButton } from "./signup-button";
 
 export function Plan({

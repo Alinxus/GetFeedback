@@ -1,13 +1,11 @@
-'use client'
+"use client";
+
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useEffect } from "react";
 import { SignInButton } from "../auth/SignInButton";
 import { ModeToggle } from "../theme/ModeToggle";
-import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
-
-
 
 function useBoundedScroll(threshold: number) {
   let { scrollY } = useScroll();
@@ -62,7 +60,7 @@ export function LandingHeader() {
             src="/icon.png"
             width={32}
             height={32}
-            alt="grazias logo"
+            alt="get-testimonials.com logo"
           />
         </motion.div>
         <motion.nav
@@ -76,7 +74,7 @@ export function LandingHeader() {
           className="flex items-center gap-4 text-sm font-medium text-muted-foreground"
         >
           <a href="#pricing">Pricing</a>
-          <a href="#features">Features</a>
+          <a href="#features">Feathures</a>
           <AppButton />
           <ModeToggle />
         </motion.nav>
@@ -90,10 +88,10 @@ let clamp = (number: number, min: number, max: number) =>
 
 const AppButton = () => {
   const session = useSession();
-  const {user, isAuthenticated} = useKindeBrowserClient();
-  if(isAuthenticated){
+
+  if (session.data?.user) {
     return <a href="/products">App</a>;
-  }else {
+  } else {
     return <SignInButton />;
   }
 };

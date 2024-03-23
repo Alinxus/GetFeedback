@@ -1,6 +1,6 @@
 "use server";
 
-import { signIn, signOut } from "@/auth/auth";
+import { useSession, signIn, signOut } from "next-auth/react";
 import { getServerUrl } from "@/get-server-url";
 import { ActionError, userAction } from "@/safe-actions";
 import { stripe } from "@/stripe";
